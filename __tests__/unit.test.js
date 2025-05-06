@@ -95,6 +95,6 @@ test('invalid hex color: 19191919', () => {
   expect(isHexColor('19191919')).toBe(false);
 });
 //false
-test('invalid hex color: #z1z1', () => {
-  expect(isHexColor('#z1z1')).toBe(false);
+test('invalid hex color: #z1z1z', () => {
+  expect(isHexColor('#z1z1z')).toBe(false);
 });
