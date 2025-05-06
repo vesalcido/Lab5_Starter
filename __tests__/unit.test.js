@@ -86,8 +86,15 @@ test('valid date: 5/7/25', () => {
 test('valid hex color: #000000', () => {
   expect(isHexColor('#000000')).toBe(true);
 });
-
+//true 
+test('valid hex color:fff', () => {
+  expect(isHexColor('fff')).toBe(true);
+});
 //false
 test('invalid hex color: 19191919', () => {
   expect(isHexColor('19191919')).toBe(false);
+});
+//false
+test('invalid hex color: #z1z1', () => {
+  expect(isHexColor('#z1z1')).toBe(false);
 });
