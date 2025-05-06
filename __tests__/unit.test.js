@@ -44,3 +44,13 @@ test('invalid email: 12.com', () => {
 test('invalid email: vesalciod@gmail', () => {
   expect(isEmail('vesalcido@gmail')).toBe(false);
 });
+
+//Test for password function
+//true
+test('valid password: KnG103', () => {
+  expect(isStrongPassword('KnG103')).toBe(true);
+});
+//false
+test('invalid password: 101aew', () => {
+  expect(isStrongPassword('101aew')).toBe(false);
+});
