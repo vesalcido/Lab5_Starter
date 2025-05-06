@@ -14,7 +14,15 @@ import {
 test('valid phone number: 619-315-8598', () => {
   expect(isPhoneNumber('619-315-8598')).toBe(true);
 });
+// true
+test('valid phone number: (760)-970-9304', () => {
+  expect(isPhoneNumber('(760)-970-9304')).toBe(true);
+});
 //false
-test('valid phone number: 61-9315-8598', () => {
+test('invalid phone number: 61-9315-8598', () => {
   expect(isPhoneNumber('61-9315-8598')).toBe(false);
+});
+//false
+test('invalid phone number: 970-9304', () => {
+  expect(isPhoneNumber('970-9304')).toBe(false);
 });
