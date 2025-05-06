@@ -50,7 +50,15 @@ test('invalid email: vesalciod@gmail', () => {
 test('valid password: KnG103', () => {
   expect(isStrongPassword('KnG103')).toBe(true);
 });
+//true
+test('valid password: VeSa177_', () => {
+  expect(isStrongPassword('VeSa177_')).toBe(true);
+});
 //false
 test('invalid password: 101aew', () => {
   expect(isStrongPassword('101aew')).toBe(false);
+});
+//false
+test('invalid password: Ve', () => {
+  expect(isStrongPassword('Ve')).toBe(false);
 });
