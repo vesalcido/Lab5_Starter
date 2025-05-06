@@ -68,8 +68,15 @@ test('invalid password: Ve', () => {
 test('valid date: 5/6/2025', () => {
   expect(isDate('5/6/2025')).toBe(true);
 });
-
+//true
+test('valid date: 05/07/2025', () => {
+  expect(isDate('05/07/2025')).toBe(true);
+});
 //false
 test('invalid date: 133/61/2025', () => {
   expect(isDate('133/61/2025')).toBe(false);
+});
+//false
+test('valid date: 5/7/25', () => {
+  expect(isDate('5/7/25')).toBe(false);
 });
