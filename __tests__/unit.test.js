@@ -80,3 +80,14 @@ test('invalid date: 133/61/2025', () => {
 test('valid date: 5/7/25', () => {
   expect(isDate('5/7/25')).toBe(false);
 });
+
+//test for isHexColor
+//true 
+test('valid hex color: #000000', () => {
+  expect(isHexColor('#000000')).toBe(true);
+});
+
+//false
+test('invalid hex color: 19191919', () => {
+  expect(isHexColor('19191919')).toBe(false);
+});
