@@ -62,3 +62,14 @@ test('invalid password: 101aew', () => {
 test('invalid password: Ve', () => {
   expect(isStrongPassword('Ve')).toBe(false);
 });
+
+//test for is date function
+//true
+test('valid date: 5/6/2025', () => {
+  expect(isDate('5/6/2025')).toBe(true);
+});
+
+//false
+test('invalid date: 133/61/2025', () => {
+  expect(isDate('133/61/2025')).toBe(false);
+});
