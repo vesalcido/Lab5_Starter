@@ -26,3 +26,12 @@ test('invalid phone number: 61-9315-8598', () => {
 test('invalid phone number: 970-9304', () => {
   expect(isPhoneNumber('970-9304')).toBe(false);
 });
+
+//Test for the function isEmail
+test('valid email:khn042@ucsd.edu', () => {
+  expect(isEmail('khn042@ucsd.edu')).toBe(true);
+});
+
+test('invalid email: 12.com', () => {
+  expect(isEmail('12.com')).toBe(false);
+});
