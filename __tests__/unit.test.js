@@ -19,19 +19,28 @@ test('valid phone number: (760)-970-9304', () => {
   expect(isPhoneNumber('(760)-970-9304')).toBe(true);
 });
 //false
-test('invalid phone number: 61-9315-8598', () => {
-  expect(isPhoneNumber('61-9315-8598')).toBe(false);
+test('invalid phone number: 11-11-1111', () => {
+  expect(isPhoneNumber('11-11-1111')).toBe(false);
 });
 //false
-test('invalid phone number: 970-9304', () => {
-  expect(isPhoneNumber('970-9304')).toBe(false);
+test('invalid phone number: 7609709304', () => {
+  expect(isPhoneNumber('7609709304')).toBe(false);
 });
 
 //Test for the function isEmail
+//true
 test('valid email:khn042@ucsd.edu', () => {
   expect(isEmail('khn042@ucsd.edu')).toBe(true);
 });
-
+//true
+test('valid email:vesalcido@gmail.com', () => {
+  expect(isEmail('vesalcido@gmail.com')).toBe(true);
+});
+//false
 test('invalid email: 12.com', () => {
   expect(isEmail('12.com')).toBe(false);
+});
+//false
+test('invalid email: vesalciod@gmail', () => {
+  expect(isEmail('vesalcido@gmail')).toBe(false);
 });
