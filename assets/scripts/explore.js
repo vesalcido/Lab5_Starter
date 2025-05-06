@@ -35,7 +35,14 @@ function init() {
     if(selectedIndex!=="select"){
       utterance.voice=voices[selectedIndex];
     }
-
-
+    // changes the smiley face to an open mouth when someone clicks the button
+   utterance.onstart = () => {
+    faceImage.src = 'assets/images/smiling-open.png';
+  };
+  // makes the smiley face go back to normal when its done speaking
+  utterance.onend = () => {
+    faceImage.src = 'assets/images/smiling.png';
+  };
+  synth.speak(utterance);
   });
 }
